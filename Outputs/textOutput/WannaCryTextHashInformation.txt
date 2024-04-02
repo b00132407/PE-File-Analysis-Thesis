@@ -49,28 +49,7 @@ Number of files related with TextHash value: a4994014d1cef55f334f1c8a27068ecf7ed
 11. ce2194c96ebab334f8484a7a3e45e2c3bb74296fc5eddd335abf3f5c65f34967.exe
 12. 8b8f390300b2dac722ec43061e04a0f24a570e2c9107d7aba8e9b05a6b1e5c16.exe
 
-Number of files related with TextHash value: b0b5b2446c2196159ed562221f67d33e04ec34b9191fe6858f137cd2d927d8f7 (1 files):
-1. c6886613d03744ac0fd42ce9530552d60ffcb9883d6f0308ac209ed775101851.exe
-
 Number of files related with TextHash value: 2897d312ebedfd55f704db3bcafbed375bb29db085a7238f29507b034da9811b (2 files):
 1. 172f9cd29c170eca6db481e392af3dc395709e8086256f9699f216d6cf5b9191.exe
 2. dff27b4eb0805677cae27c6117cc4e97a24ce57793c0068cf5636a672b66f164.exe
-
-Number of files related with TextHash value: 1a77cfc4367a602acbd759d6e078e91f3783d472ffb1ebe7f847e9c5b9b50cbb (1 files):
-1. d103b20fa13c87e498887db5bc54d0a69829bdbe54772e9ea621a9902122125d.exe
-
-Number of files related with TextHash value: b26a145f22b9fbdc69931d129f60a0cebd56e8e60a60e8b84cf99118048945a1 (1 files):
-1. 604d06b2645a3f70cd8379994c86ff4423914d94308a6feff94d385a776dbc15.exe
-
-Number of files related with TextHash value: e040b5ae18042421c6073b7912f79cffa67a4ae5f21dc7a2fdfe8b610370316e (1 files):
-1. be22645c61949ad6a077373a7d6cd85e3fae44315632f161adc4c99d5a8e6844.exe
-
-Number of files related with TextHash value: 550794614c690c52a39442d4b03d8ace73310fa017af86f805ae7b1c53a15579 (1 files):
-1. a10c266793dc6e62ee6947981991c736383eaacad5cfc028aad1f16748b83a25.exe
-
-Number of files related with TextHash value: 132c2d5ca7395cba6278b18b12de9451d802946b934c576e4be2bef6418201e3 (1 files):
-1. ec700d09d36bedb01a2e5219328ed9a05f5061b676b08b28022f11e4cd868bed.exe
-
-Number of files related with TextHash value: 566042cde699ff021574d8995d479b7f24c434267d164515e81d49d9cffba249 (1 files):
-1. 561d7f05055800d3eb9d9e150969e2c84a71dc82a362fb3e1a224af420e53b35.exe
 

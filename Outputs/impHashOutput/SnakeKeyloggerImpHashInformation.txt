@@ -51,6 +51,3 @@ Number of files related with ImpHash value: f34d5f2d4577ed6d9ceec516c1f5a744 (45
 44. 3b14443c61bc3b07ef04963ce7b7d32f39a0bab1c160b633c90735e18bb9983b.exe
 45. f93062820a654453b592ca74ce72a5d22e18fac5c99f02214400c39ce4c09d57.exe
 
-Number of files related with ImpHash value: f093bdfddcd6ca11531553576c65e93f (1 files):
-1. 8b301421ea1c55e9b8c3c63e68f942716d9d7fa4d0b3555b73034612115239ba.exe
-

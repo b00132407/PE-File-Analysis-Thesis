@@ -13,7 +13,7 @@ def calculate_rsrc_hash(pe):
             return hashlib.sha256(rsrc_data).hexdigest()
 
 #Directing the path to where portable executable files are stored.
-path_to_files = "/home/b00132407/Desktop/Conti/"
+path_to_files = "/home/b00132407/Desktop/Vidar/"
 
 #Dictionary to store calculated .data hash values
 rsrc_hash_values = {}
@@ -39,11 +39,12 @@ for filename in os.listdir(path_to_files):
         rsrc_hash_values[rsrc_hash] = [filename]
 
 #Open new file in write mode to add calculated values
-with open("/home/b00132407/Desktop/rsrcOutput/ContiRsrcHashInformation.txt", "w") as f:
+with open("/home/b00132407/Desktop/rsrcOutput/VidarRsrcHashInformation.txt", "w") as f:
     for rsrc_hash, filenames in rsrc_hash_values.items():
-        #List number of files related to specific rich hash value
-        f.write(f"Number of files related with RsrcHash value: {rsrc_hash} ({len(filenames)} files):\n")
-        #List specific files containing rich hash value
-        for index, filename in enumerate(filenames, start=1):
-            f.write(f"{index}. {filename}\n")
-        f.write("\n")
+        if len(filenames) >= 2 and rsrc_hash is not None and rsrc_hash != "":
+            #List number of files related to specific rich hash value
+            f.write(f"Number of files related with RsrcHash value: {rsrc_hash} ({len(filenames)} files):\n")
+            #List specific files containing rich hash value
+            for index, filename in enumerate(filenames, start=1):
+                f.write(f"{index}. {filename}\n")
+            f.write("\n")

@@ -4,7 +4,7 @@ import os
 import pefile
 
 #Directing the path to where portable executable files are stored.
-path_to_files = "/home/b00132407/Desktop/Stealc/"
+path_to_files = "/home/b00132407/Desktop/WannaCry/"
 
 #Dictionary to store calculated imphash values
 imphash_values = {}
@@ -30,14 +30,15 @@ for filename in os.listdir(path_to_files):
         imphash_values[file_imphash] = [filename]
 
 #Open new file in write mode to add calculated values to it
-with open("StealCImpHashInformation.txt", "w") as f:
+with open("/home/b00132407/Desktop/impHashOutput/WannaCryImpHashInformation.txt", "w") as f:
     
     #Iterate through dictionary to values
     for imphash, filenames in imphash_values.items():
-        #List number of files related to specific imphash value
-        f.write(f"Number of files related with ImpHash value: {imphash} ({len(filenames)} files):\n")
-        #List specific files containing imphash value
-        for index, filename in enumerate(filenames, start=1):
-            f.write(f"{index}. {filename}\n")
-        f.write("\n")
+        if len(filenames) >= 2 and imphash is not None and imphash != "":
+            #List number of files related to specific imphash value
+            f.write(f"Number of files related with ImpHash value: {imphash} ({len(filenames)} files):\n")
+            #List specific files containing imphash value
+            for index, filename in enumerate(filenames, start=1):
+                f.write(f"{index}. {filename}\n")
+            f.write("\n")
 

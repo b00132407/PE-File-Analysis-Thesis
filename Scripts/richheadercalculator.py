@@ -4,7 +4,7 @@ import os
 import pefile
 
 #Directing the path to where portable executable files are stored.
-path_to_files = "/home/b00132407/Desktop/Stealc/"
+path_to_files = "/home/b00132407/Desktop/WannaCry/"
 
 #Dictionary to store calculated rich hash values
 rich_hash_values = {}
@@ -30,14 +30,18 @@ for filename in os.listdir(path_to_files):
         rich_hash_values[file_rich_hash] = [filename]
 
 #Open new file in write mode to add calculated values
-with open("/home/b00132407/Desktop/richOutput/StealCHeaderHashInformation.txt", "w") as f:
+with open("/home/b00132407/Desktop/richOutput/WannaCryRichHashInformation.txt", "w") as f:
     
     #Iterate through dictionary to values
     for rich_hash, filenames in rich_hash_values.items():
-        #List number of files related to specific rich hash value
-        f.write(f"Number of files related with Rich hash value: {rich_hash} ({len(filenames)} files):\n")
-        #List specific files containing rich hash value
-        for index, filename in enumerate(filenames, start=1):
-            f.write(f"{index}. {filename}\n")
-        f.write("\n")
+        if len(filenames) >= 2 and rich_hash is not None and rich_hash != "":
+            #List number of files related to specific rich hash value
+            f.write(f"Number of files related with Rich hash value: {rich_hash} ({len(filenames)} files):\n")
+            #List specific files containing rich hash value
+            for index, filename in enumerate(filenames, start=1):
+                f.write(f"{index}. {filename}\n")
+            f.write("\n")
+
+
+     
 

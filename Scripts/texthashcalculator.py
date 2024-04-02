@@ -13,7 +13,7 @@ def calculate_text_hash(pe):
             return hashlib.sha256(text_data).hexdigest()
 
 #Directing the path to where portable executable files are stored.
-path_to_files = "/home/b00132407/Desktop/Formbook/"
+path_to_files = "/home/b00132407/Desktop/Vidar/"
 
 #Dictionary to store calculated .text hash values
 text_hash_values = {}
@@ -40,13 +40,14 @@ for filename in os.listdir(path_to_files):
         text_hash_values[text_hash] = [filename]
 
 #Open new file in write mode to add calculated values
-with open("/home/b00132407/Desktop/textOutput/FormbookTextHashInformation.txt", "w") as f:
+with open("/home/b00132407/Desktop/textOutput/VidarTextHashInformation.txt", "w") as f:
 
     #Iterate through dictionary to values
     for text_hash, filenames in text_hash_values.items():
-        #List number of files related to specific rich hash value
-        f.write(f"Number of files related with TextHash value: {text_hash} ({len(filenames)} files):\n")
-        #List specific files containing rich hash value
-        for index, filename in enumerate(filenames, start=1):
-            f.write(f"{index}. {filename}\n")
-        f.write("\n")
+        if len(filenames) >= 2 and text_hash is not None and text_hash != "":
+            #List number of files related to specific rich hash value
+            f.write(f"Number of files related with TextHash value: {text_hash} ({len(filenames)} files):\n")
+            #List specific files containing rich hash value
+            for index, filename in enumerate(filenames, start=1):
+                f.write(f"{index}. {filename}\n")
+            f.write("\n")

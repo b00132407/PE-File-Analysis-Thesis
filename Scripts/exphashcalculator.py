@@ -4,7 +4,7 @@ import os
 import pefile
 
 #Directing the path to where portable executable files are stored.
-path_to_files = "/home/b00132407/Desktop/Stealc/"
+path_to_files = "/home/b00132407/Desktop/WannaCry/"
 
 #Dictionary to store calculated exphash values
 exphash_values = {}
@@ -30,13 +30,14 @@ for filename in os.listdir(path_to_files):
         exphash_values[file_exphash] = [filename]
 
 #Open new file in write mode to add calculated values to it
-with open("/home/b00132407/Desktop/exphashOutput/StealCExpHashInformation.txt", "w") as f:
+with open("/home/b00132407/Desktop/exphashOutput/WannaCryExpHashInformation.txt", "w") as f:
     
     #Iterate through dictionary to values
     for exphash, filenames in exphash_values.items():
-        #List number of files related to specific exphash value
-        f.write(f"Number of files related with ExpHash value: {exphash} ({len(filenames)} files):\n")
-        #List specific files containing exphash value
-        for index, filename in enumerate(filenames, start=1):
-            f.write(f"{index}. {filename}\n")
-        f.write("\n")
+        if len(filenames) >= 2 and exphash is not None and exphash != "":
+            #List number of files related to specific exphash value
+            f.write(f"Number of files related with ExpHash value: {exphash} ({len(filenames)} files):\n")
+            #List specific files containing exphash value
+            for index, filename in enumerate(filenames, start=1):
+                f.write(f"{index}. {filename}\n")
+            f.write("\n")
